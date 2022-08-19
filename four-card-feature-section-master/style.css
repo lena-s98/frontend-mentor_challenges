@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+root {
+    font-size: 15px;
+}
+
+:root {
+    /* Card Component Colors */
+    --red-bg-color: hsl(0, 78%, 62%);
+    --cyan-bg-color: hsl(180, 62%, 55%);
+    --orange-bg-color: hsl(34, 97%, 64%);
+    --blue-bg-color: hsl(212, 86%, 64%);
+    /* Text Colors */
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    width: 90%;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 400;
+    color: var(--grayish-blue);
+    /* background-color: var(--very-light-gray); */
+}
+
+/* HEADER STYLING AND LAYOUT */
+
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+}
+
+.header-description {
+    /* width: 90%; */
+    margin: 0 auto;
+}
+
+span {
+    font-weight: 600;
+    color: var(--very-dark-blue);
+}
+
+/* CARD COMPONENT */
+
+.card-component {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px lightgray;
+}
+
+.cyan-top-border,
+.red-top-border,
+.orange-top-border,
+.blue-top-border {
+    border-top: 4px solid;
+}
+
+.cyan-top-border {
+    border-top-color: var(--cyan-bg-color);
+}
+.red-top-border {
+    border-top-color: var(--red-bg-color);
+}
+.orange-top-border {
+    border-top-color: var(--orange-bg-color);
+}
+.blue-top-border {
+    border-top-color: var(--blue-bg-color);
+}
+
+h2 {
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--very-dark-blue);
+}
+
+.card-description {
+    font-size: 0.9rem;
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.icon {
+    margin-top: 1.5rem;
+}
+
+@media only screen and (min-width: 50rem) {
+    .layout-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, auto);
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+
+    .supervisor {
+        grid-row: 3 / 6;
+    }
+
+    .team-builder {
+        grid-column: 2 / 3;
+        grid-row: 2 / 5;
+    }
+
+    .karma {
+        grid-column: 2 / 3;
+        grid-row: 5 / 8;
+    }
+
+    .calculator {
+        grid-column: 3 / 4;
+        grid-row: 3 / 6;
+    }
+
+    header {
+        width: 40%;
+        margin: 3rem auto;
+    }
+
+    .card-component {
+        margin: 0;
+    }
+}
